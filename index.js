@@ -11,13 +11,13 @@ function reverseString(str) {
 
     // cleaned up 1
     // return str
-    //     .split('')
+    //     .split('')  // turn a string into an array
     //     .reverse()
     //     .join('');
 
     ///////////////////////
 
-    // decreaseing array for loop 
+    // Decreaseing array For Loop 
     // let revString = '';
     // for(let i = str.length -1; i >= 0; i -- ) { // -1 is needed so it defines the actual array since 0 = 1
     //     revString = revString + str[i];
@@ -26,7 +26,7 @@ function reverseString(str) {
 
     ///////////////////////
 
-    // incementing array for loop
+    // Incementing array For Loop
     // let revString = '';
     // for(let i = 0; i <= str.length -1; i++ ) { // -1 is needed so it defines the actual array since 0 = 1
     //     revString = str[i] + revString;
@@ -35,10 +35,20 @@ function reverseString(str) {
 
     ///////////////////////
 
+    //For Of Loop (char can be anything)
+    // let revString = '';
+    // for(let char of str) { // -1 is needed so it defines the actual array since 0 = 1
+    //     revString = char + revString;
+    // }
+    // return revString;
+
+    ///////////////////////
+
+    // For Each Loop
     let revString = '';
-    for(let char of str) { // -1 is needed so it defines the actual array since 0 = 1
+    str.split('').forEach(function(char) {
         revString = char + revString;
-    }
+    });
     return revString;
   }
   
