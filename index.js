@@ -3,7 +3,10 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-    return 'Let\'s Start'
+    const strArr = str.split('');// no space'' = letter, spaced ' ' = full word
+    strArr.reverse();
+
+    console.log(strArr);
   }
   
   
