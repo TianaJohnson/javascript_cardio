@@ -45,11 +45,17 @@ function reverseString(str) {
     ///////////////////////
 
     // For Each Loop
-    let revString = '';
-    str.split('').forEach(function(char) {
-        revString = char + revString;
-    });
-    return revString;
+    // let revString = '';
+    // str.split('').forEach(char => revString = char + revString);
+    // return revString;
+
+    //////////////////////
+
+    //reduce
+    return str.split('').reduce(function(revString, char){
+        return char + revString;
+    }, '');
+
   }
   
   
