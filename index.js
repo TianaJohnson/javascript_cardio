@@ -1,3 +1,5 @@
+// For this file use 'node index' in terminal to run
+
 // CHALLENGE 1: REVERSE A STRING
 // Return a string in reverse
 // ex. reverseString('hello') === 'olleh'
@@ -5,6 +7,7 @@
 function reverseString(str) {
     const strArr = str.split('');// no space'' = letter, spaced ' ' = full word
     strArr.reverse();
+    return strArr.join('');
 
     console.log(strArr);
   }
