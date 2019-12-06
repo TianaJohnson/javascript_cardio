@@ -52,10 +52,13 @@ function reverseString(str) {
     //////////////////////
 
     //reduce
-    return str.split('').reduce(function(revString, char){
-        return char + revString;
-    }, '');
+    // return str.split('').reduce(function(revString, char){
+    //     return char + revString;
+    // }, '');
 
+    //cleaned up reduce function
+    return str.split('').reduce((revString, char) => char + revString, '');
+    
   }
   
   
