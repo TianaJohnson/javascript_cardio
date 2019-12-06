@@ -5,11 +5,24 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-    const strArr = str.split('');// no space'' = letter, spaced ' ' = full word
-    strArr.reverse();
-    return strArr.join('');
+    // const strArr = str.split('');// no space'' = letter, spaced ' ' = full word
+    // strArr.reverse();
+    // return strArr.join('');
 
-    console.log(strArr);
+    // cleaned up 1
+    // return str
+    //     .split('')
+    //     .reverse()
+    //     .join('');
+
+    ///////////////////////
+
+    // for loop
+    let revString = '';
+    for(let i = str.length -1; i >= 0; i -- ) { // -1 is needed so it defines the actual array since 0 = 1
+        revString = revString + str[i];
+    }
+    return revString;
   }
   
   
