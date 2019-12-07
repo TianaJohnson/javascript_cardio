@@ -11,9 +11,9 @@ function reverseString(str) {
 
     // cleaned up 1
     // return str
-    //     .split('')  // turn a string into an array
-    //     .reverse()
-    //     .join('');
+    //     .split('')   // turn a string into an array
+    //     .reverse()   
+    //     .join('');   // method returns the array as a string.
 
     ///////////////////////
 
@@ -56,9 +56,9 @@ function reverseString(str) {
     //     return char + revString;
     // }, '');
 
-    //cleaned up reduce function
+    //****cleaned up reduce function*****
     return str.split('').reduce((revString, char) => char + revString, '');
-    
+       
   }
   
   
@@ -67,7 +67,14 @@ function reverseString(str) {
   // Return true if palindrome and false if not
   // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
   
-  function isPalindrome(str) {}
+  function isPalindrome(str) {
+      const revString = str
+        .split('')   // turn a string into an array
+        .reverse()   // reverse, duh
+        .join('');   // method returns the array as a string.
+
+        return revString === str;
+  }
   
   
   
@@ -99,7 +106,8 @@ function reverseString(str) {
   
   
   
-  // Call Function
-  const output = reverseString('hello');
+   // Call Function
+ // const output = reverseString('hello');
+  const output = isPalindrome('racecar')
   
   console.log(output);
