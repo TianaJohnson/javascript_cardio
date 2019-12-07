@@ -110,12 +110,25 @@ function reverseString(str) {
 
     //////////////////
 
-    return str
-        .toLowerCase()
-        .split(' ')
-        .map((word) => word[0].toUpperCase() + word.substr(1))
-        .join(' ');
+
+    //Second Option cleaned up edition
+    // return str
+    //     .toLowerCase()
+    //     .split(' ')
+    //     .map((word) => word[0].toUpperCase() + word.substr(1))
+    //     .join(' ');
+
+
+    ///////////////////
+
+    //Regular Expressions
+    /// omg what the heck is this
+    return str.replace(/\b[a-z]/gi, function(char){
+        return char.toUpperCase();
+    })
   }
+
+
   
   
   
