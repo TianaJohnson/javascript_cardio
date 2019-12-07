@@ -67,7 +67,8 @@ function reverseString(str) {
   // Return true if palindrome and false if not
   // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
   
-  function isPalindrome(str) {
+  /// reverse string = string turned into array, reveresed, turned back into a string
+  function isPalindrome(str) { 
       const revString = str
         .split('')   // turn a string into an array
         .reverse()   // reverse, duh
