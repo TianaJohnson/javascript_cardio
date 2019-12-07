@@ -83,8 +83,17 @@ function reverseString(str) {
   // Return an integer in reverse
   // ex. reverseInt(521) === 125
   
-  function reverseInt(int) {}
-  
+  function reverseInt(int) {
+      const revString = int
+        .toString()     // turns integer into a string
+        .split('')
+        .reverse()
+        .join('')
+
+        return parseInt(revString); 
+  }
+   
+   
   
   
   // CHALLENGE 4: CAPITALIZE LETTERS
@@ -109,6 +118,7 @@ function reverseString(str) {
   
    // Call Function
  // const output = reverseString('hello');
-  const output = isPalindrome('racecar')
+ // const output = isPalindrome('racecar')
+  const output = reverseInt('01234')
   
   console.log(output);
