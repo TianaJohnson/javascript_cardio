@@ -98,15 +98,23 @@ function reverseString(str) {
   // Return a string with the first letter of every word capitalized
   // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
   function capitalizeLetters(str) {
-    const strArr = str
-        .toLowerCase()   // makes everything lower case
-        .split(' ');     // turn a string into an array, with space so we get the words 
+    // const strArr = str
+    //     .toLowerCase()   // makes everything lower case
+    //     .split(' ');     // turn a string into an array, with space so we get the words 
 
-    for(let i = 0; i < strArr.length; i++) {
-        strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
-    }
-    return strArr.join(' ');
+    // for(let i = 0; i < strArr.length; i++) {
+    //     strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+    // }
+    // return strArr.join(' ');
 
+
+    //////////////////
+
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map((word) => word[0].toUpperCase() + word.substr(1))
+        .join(' ');
   }
   
   
