@@ -86,7 +86,7 @@ function reverseString(str) {
   function reverseInt(int) {
       const revString = int
         .toString()     // turns integer into a string
-        .split('')
+        .split('')      // turn a string into an array
         .reverse()
         .join('')
 
@@ -94,13 +94,20 @@ function reverseString(str) {
                                                      // indicating the sign of a number passed into the argument
   }
    
-   
-  
-  
   // CHALLENGE 4: CAPITALIZE LETTERS
   // Return a string with the first letter of every word capitalized
   // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-  function capitalizeLetters(str) {}
+  function capitalizeLetters(str) {
+    const strArr = str
+        .toLowerCase()   // makes everything lower case
+        .split(' ');     // turn a string into an array, with space so we get the words 
+
+    for(let i = 0; i < strArr.length; i++) {
+        strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+    }
+    return strArr.join(' ');
+
+  }
   
   
   
@@ -119,7 +126,8 @@ function reverseString(str) {
   
    // Call Function
  // const output = reverseString('hello');
- // const output = isPalindrome('racecar')
-  const output = reverseInt('-01234')
+ // const output = isPalindrome('racecar');
+ // const output = reverseInt('-01234');
+ const output = capitalizeLetters('i love javascript')
   
   console.log(output);
