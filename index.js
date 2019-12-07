@@ -90,7 +90,8 @@ function reverseString(str) {
         .reverse()
         .join('')
 
-        return parseInt(revString); 
+        return parseInt(revString) * Math.sign(int); // Math.sign = function returns either a positive or negative +/- 1,
+                                                     // indicating the sign of a number passed into the argument
   }
    
    
@@ -119,6 +120,6 @@ function reverseString(str) {
    // Call Function
  // const output = reverseString('hello');
  // const output = isPalindrome('racecar')
-  const output = reverseInt('01234')
+  const output = reverseInt('-01234')
   
   console.log(output);
