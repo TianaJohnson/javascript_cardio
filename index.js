@@ -206,11 +206,11 @@ function reverseString(str) {
 
 //4th, reduced
 
-const array = [37,-5,-15,-37,5,15]
+// const array = [37,-5,-15,-37,5,15]
 
-const minUsingReduce = () => array.reduce((min, currentValue) => Math.min(min, currentValue), array[0])
-const maxUsingReduce = () => array.reduce((max, currentValue) => Math.max(max, currentValue), array[0])
-console.log(`Minimum: ${minUsingReduce()}, Maximum: ${maxUsingReduce()}`) // Minimum: -37, Maximum: 37
+// const minUsingReduce = () => array.reduce((min, currentValue) => Math.min(min, currentValue), array[0])
+// const maxUsingReduce = () => array.reduce((max, currentValue) => Math.max(max, currentValue), array[0])
+// console.log(`Minimum: ${minUsingReduce()}, Maximum: ${maxUsingReduce()}`) // Minimum: -37, Maximum: 37
   
    // Call Function
  // const output = reverseString('hello');
