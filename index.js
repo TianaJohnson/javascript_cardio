@@ -147,15 +147,37 @@ function reverseString(str) {
   
   
 
-  //Random function asked at a interview - TJ
-  // Return the lowest and the highest number from and array
-const numbers = [2, 4, 9, 2, 0, 16, 24, -8, 15, 2018 ];
+    //Random function asked at a interview - TJ
+    // Return the lowest and the highest number from and array
 
-const smallest_number = Math.min(...numbers);
-const largest_number = Math.max(...numbers);
+    // const numbers = [2, 4, 9, 2, 0, 16, 24, -8, 15, 2018 ];
 
-console.log('Smallest Value:', smallest_number); // Smallest Value: 0
-console.log('Largest Value:', largest_number);   // Largest Value: 24
+    // const smallest_number = Math.min(...numbers); //...numbers calls a spread on the array
+    // const largest_number = Math.max(...numbers);
+
+    // console.log('Smallest Value:', smallest_number); // Smallest Value: 0
+    // console.log('Largest Value:', largest_number);   // Largest Value: 24
+
+////////////////////////
+
+var numbers = [2, 4, 9, 2, 16, 24, 12, 219, 652, 0.00928 ];
+var largest = -Infinity;
+var smallest = Infinity;
+
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+        largest = numbers[i];
+    }
+}
+
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] < smallest) {
+        smallest = numbers[i];
+    }
+}
+
+console.log(largest);
+console.log(smallest);
   
    // Call Function
  // const output = reverseString('hello');
