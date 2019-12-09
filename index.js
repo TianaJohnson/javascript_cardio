@@ -136,7 +136,17 @@ function reverseString(str) {
   // Return the character that is most common in a string
   // ex. maxCharacter('javascript') == 'a'
   function maxCharacter(str) {
+        const charMap = {};
 
+        str.split('').forEach(function(char){
+            if(charMap[char]){
+                charMap[char]++;
+            } else {
+                charMap[char]= 1;
+            }
+        });
+
+        console.log(charMap);
   }
   
   
@@ -216,6 +226,7 @@ function reverseString(str) {
  // const output = reverseString('hello');
  // const output = isPalindrome('racecar');
  // const output = reverseInt('-01234');
- const output = capitalizeLetters('i love javascript')
+//  const output = capitalizeLetters('i love javascript')
+    const output = maxCharacter('javascript');
   
   console.log(output);
