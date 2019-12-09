@@ -160,24 +160,26 @@ function reverseString(str) {
 
 ////////////////////////
 
-var numbers = [2, 4, 9, 2, 16, 24, 12, 219, 652, 0.00928 ];
-var largest = -Infinity;
-var smallest = Infinity;
+//Second option of find min / max
 
-for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] > largest) {
-        largest = numbers[i];
-    }
-}
+// var numbers = [2, 4, 9, 2, 16, 24, 12, 219, 652, 0.00928 ];
+// var largest = -Infinity;
+// var smallest = Infinity;
 
-for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] < smallest) {
-        smallest = numbers[i];
-    }
-}
+// for (var i = 0; i < numbers.length; i++) {
+//     if (numbers[i] > largest) {
+//         largest = numbers[i];
+//     }
+// }
 
-console.log(largest);
-console.log(smallest);
+// for (var i = 0; i < numbers.length; i++) {
+//     if (numbers[i] < smallest) {
+//         smallest = numbers[i];
+//     }
+// }
+
+// console.log(largest);
+// console.log(smallest);
   
    // Call Function
  // const output = reverseString('hello');
