@@ -137,8 +137,10 @@ function reverseString(str) {
   // ex. maxCharacter('javascript') == 'a'
   function maxCharacter(str) {
         const charMap = {};
+        let maxNum = 0;
+        let maxChar = '';
 
-        str.split('').forEach(function(char){
+        str.split('').forEach(function(char) {
             if(charMap[char]){
                 charMap[char]++;
             } else {
@@ -146,7 +148,14 @@ function reverseString(str) {
             }
         });
 
-        console.log(charMap);
+       for(let char in charMap) {
+           // debugger;   // node inspect index.js then hit c enter to run. 
+           if(charMap[char] > maxNum) {
+               maxNum = charMap[char];
+               maxChar = char;
+           }
+       }
+       return maxChar;
   }
   
   
