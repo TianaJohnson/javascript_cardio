@@ -135,7 +135,9 @@ function reverseString(str) {
   // CHALLENGE 5: MAX CHARACTER
   // Return the character that is most common in a string
   // ex. maxCharacter('javascript') == 'a'
-  function maxCharacter(str) {}
+  function maxCharacter(str) {
+
+  }
   
   
   
@@ -144,6 +146,9 @@ function reverseString(str) {
   function fizzBuzz() {}
   
   
+
+  //Random function asked at a interview - TJ
+  // Return the lowest and the highest number from and array
   
    // Call Function
  // const output = reverseString('hello');
