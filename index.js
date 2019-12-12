@@ -304,8 +304,20 @@ function chunkArray(arr, len) {
   return chunkedArr;
 }
 
+// CHALLENGE 3: FLATTEN ARRAY
+// Take an array of arrays and flatten to a single array
+// ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
+
+function flattenArray(arrays) {
+    // SOLUTION 1
+    return arrays.reduce(function(a, b) {
+        return a.concat(b);
+    });
+}
+
 // Call Function
 // const output = longestWord("Hi, my name is Tiana");
-const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
+// const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
+const output = flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
 
 console.log(output);
