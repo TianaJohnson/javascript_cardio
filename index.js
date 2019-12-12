@@ -1,3 +1,5 @@
+/////////////////// SESSION 1 ////////////////////////
+
 // For this file use 'node index' in terminal to run
 
 // CHALLENGE 1: REVERSE A STRING
@@ -251,6 +253,8 @@ function reverseString(str) {
 //  const output = capitalizeLetters('i love javascript')
     // const output = maxCharacter('javascript');
     //const output = fizzBuzz();
-  
-  
-  console.log(output);
+    console.log(output);
+
+    //////////////////////////////////////////////////////////////
+
+    /////////////////// SESSION 2 ////////////////////////////////
