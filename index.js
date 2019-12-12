@@ -315,7 +315,19 @@ function flattenArray(arrays) {
     // });
 
     // SOLUTION 2
-    return [].concat.apply([],arrays) ;
+    // return [].concat.apply([],arrays) ;
+
+    // SOLUTION 3
+
+    // function add(a, b, c) {
+    //     return a + b + c;
+    // }
+    // const arr = [1, 2, 3];
+    // console.log(add(...arr));
+
+    ///////////////////
+    return [].concat(...arrays) ; // cleanes soultion
+
 }
 
 // Call Function
