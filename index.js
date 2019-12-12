@@ -274,6 +274,7 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
+    // solution 1
 // init chunched arr
 const chunkedArr = [];
 //set index
@@ -294,6 +295,6 @@ const chunkedArr = [];
 
 // Call Function
 // const output = longestWord("Hi, my name is Tiana");
-const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2)
+const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 3)
 
 console.log(output);
