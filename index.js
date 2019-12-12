@@ -289,7 +289,7 @@ function chunkArray(arr, len) {
   const chunkedArr = [];
 
   // loop throug arr
-  arr.forEach(function(val) {
+  arr.forEach(val => {
     /// Get last element
     const last = chunkedArr[chunkedArr.length - 1];
 
@@ -300,7 +300,7 @@ function chunkArray(arr, len) {
     } else {
       last.push(val);
     }
-  });
+});
   return chunkedArr;
 }
 
