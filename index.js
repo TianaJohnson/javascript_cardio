@@ -266,13 +266,14 @@ function reverseString(str) {
 function longestWord(sen) {
     //regular expretion example
     // create filltered array
-const wordArr = sen.toLowerCase().match(/[ a-z0-9 ]+/g);   //regular exprection goes between // a-z 0-9
-                                                            //g = global, meaning it doesnt stop at the first match, it keeps going
-    // sort by length
-    const sorted = wordArr.sort(function( a, b ) {
-        return b.length - a.length;
-    });
-    console.log(sorted);
+    // i did not get this one to work properly
+// const wordArr = sen.toLowerCase().match(/[ a-z0-9 ]+/g);   //regular exprection goes between // a-z 0-9
+//                                                             //g = global, meaning it doesnt stop at the first match, it keeps going
+//     // sort by length
+//     const sorted = wordArr.sort(function( a, b ) {
+//         return b.length - a.length;
+//     });
+//     console.log(sorted);
   }
 
   // Call Function
