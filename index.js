@@ -249,7 +249,7 @@ function longestWord(sen) {
   //regular expretion example
   // create filltered array
   // i did not get this one to work properly
-  const wordArr = sen.toLowerCase().match(/[ a-z0-9 ]+/g); //regular exprection goes between // a-z 0-9
+  const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g); //regular exprection goes between // a-z 0-9
   //                                                             //g = global, meaning it doesnt stop at the first match, it keeps going
   console.log(wordArr);
   //     // sort by length
