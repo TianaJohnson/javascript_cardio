@@ -310,9 +310,12 @@ function chunkArray(arr, len) {
 
 function flattenArray(arrays) {
     // SOLUTION 1
-    return arrays.reduce(function(a, b) {
-        return a.concat(b);
-    });
+    // return arrays.reduce(function(a, b) {
+    //     return a.concat(b);
+    // });
+
+    // SOLUTION 2
+    return [].concat.apply([],arrays) ;
 }
 
 // Call Function
