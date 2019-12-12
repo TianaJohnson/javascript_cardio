@@ -68,12 +68,11 @@ function reverseString(str) {
 
 /// reverse string = string turned into array, reveresed, turned back into a string
 function isPalindrome(str) {
-//   const revString = str
-//     .split("") // turn a string into an array
-//     .reverse() // reverse, duh
-//     .join(""); // method returns the array as a string.
-
-//   return revString === str;
+  //   const revString = str
+  //     .split("") // turn a string into an array
+  //     .reverse() // reverse, duh
+  //     .join(""); // method returns the array as a string.
+  //   return revString === str;
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
@@ -81,13 +80,12 @@ function isPalindrome(str) {
 // ex. reverseInt(521) === 125
 
 function reverseInt(int) {
-//   const revString = int
-//     .toString() // turns integer into a string
-//     .split("") // turn a string into an array
-//     .reverse()
-//     .join("");
-
-//   return parseInt(revString) * Math.sign(int); // Math.sign = function returns either a positive or negative +/- 1,
+  //   const revString = int
+  //     .toString() // turns integer into a string
+  //     .split("") // turn a string into an array
+  //     .reverse()
+  //     .join("");
+  //   return parseInt(revString) * Math.sign(int); // Math.sign = function returns either a positive or negative +/- 1,
   // indicating the sign of a number passed into the argument
 }
 
@@ -98,28 +96,23 @@ function capitalizeLetters(str) {
   // const strArr = str
   //     .toLowerCase()   // makes everything lower case
   //     .split(' ');     // turn a string into an array, with space so we get the words
-
   // for(let i = 0; i < strArr.length; i++) {
   //     strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
   // }
   // return strArr.join(' ');
-
   //////////////////
-
   //Second Option cleaned up edition
   // return str
   //     .toLowerCase()
   //     .split(' ')
   //     .map((word) => word[0].toUpperCase() + word.substr(1))
   //     .join(' ');
-
   ///////////////////
-
   //Regular Expressions
   /// omg what the heck is this
-//   return str.replace(/\b[a-z]/gi, function(char) {
-//     return char.toUpperCase();
-//  });
+  //   return str.replace(/\b[a-z]/gi, function(char) {
+  //     return char.toUpperCase();
+  //  });
 }
 
 // CHALLENGE 5: MAX CHARACTER
@@ -252,20 +245,18 @@ function longestWord(sen) {
   const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g); //regular exprection goes between // a-z 0-9
   //NOTE: spaces between the brackets and the char in regexp, will change how the array is displayed. //g = global, meaning it doesnt stop at the first match, it keeps going
   //     // sort by length
-      const sorted = wordArr.sort(( a, b ) => 
-           b.length - a.length
-      );
-       console.log(sorted);
-      const longestWordArr= sorted.filter((word) => 
-          word.length === sorted[0].length
-      )
-      // check if more than one array value
-      if(longestWordArr.length === 1) {
-          //return the word
-          return longestWordArr[0];
-      }else{
-          return longestWordArr;
-      }
+  const sorted = wordArr.sort((a, b) => b.length - a.length);
+  console.log(sorted);
+  const longestWordArr = sorted.filter(
+    word => word.length === sorted[0].length
+  );
+  // check if more than one array value
+  if (longestWordArr.length === 1) {
+    //return the word
+    return longestWordArr[0];
+  } else {
+    return longestWordArr;
+  }
 }
 
 // CHALLENGE 2: ARRAY CHUNKING
@@ -274,27 +265,47 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // solution 1
-// init chunched arr
-const chunkedArr = [];
-//set index
- let i = 0;
+  // SOLUTION 1
+  // init chunched arr
+  // const chunkedArr = [];
+  // //set index
+  //  let i = 0;
 
- //loop while index is less than array lenhgth
- while(i < arr.length) {
-     // slice out from the index to the index + the chunk length
-     //and push onto the chunked arr
-     chunkedArr.push(arr.slice(i, i + len));
-     // INcrement by chunked length
-     i += len;
- }
- return chunkedArr;
+  //  //loop while index is less than array lenhgth
+  //  while(i < arr.length) {
+  //      // slice out from the index to the index + the chunk length
+  //      //and push onto the chunked arr
+  //      chunkedArr.push(arr.slice(i, i + len));
+  //      // INcrement by chunked length
+  //      i += len;
+  //  }
+  //  return chunkedArr;
+
+  ////////////////////////////////
+
+  // SOLUTION 2
+
+  // init array
+  const chunkedArr = [];
+
+  // loop throug arr
+  arr.forEach(function(val) {
+    /// Get last element
+    const last = chunkedArr[chunkedArr.length - 1];
+
+    //check if last and if last length is eqaul to
+    // the chunk length
+    if (!last || last.length === len) {
+      chunkedArr.push([val]);
+    } else {
+      last.push(val);
+    }
+  });
+  return chunkedArr;
 }
-
-
 
 // Call Function
 // const output = longestWord("Hi, my name is Tiana");
-const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 3)
+const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 
 console.log(output);
