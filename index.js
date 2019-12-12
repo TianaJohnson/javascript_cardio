@@ -268,7 +268,32 @@ function longestWord(sen) {
       }
 }
 
+// CHALLENGE 2: ARRAY CHUNKING
+// Split an array into chunked arrays of a specific length
+// ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3],[4, 5, 6],[7]]
+// ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
+
+function chunkArray(arr, len) {
+// init chunched arr
+const chunkedArr = [];
+//set index
+ let i = 0;
+
+ //loop while index is less than array lenhgth
+ while(i < arr.length) {
+     // slice out from the index to the index + the chunk length
+     //and push onto the chunked arr
+     chunkedArr.push(arr.slice(i, i + len));
+     // INcrement by chunked length
+     i += len;
+ }
+ return chunkedArr;
+}
+
+
+
 // Call Function
-const output = longestWord("Hi, my name is Tiana");
+// const output = longestWord("Hi, my name is Tiana");
+const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2)
 
 console.log(output);
