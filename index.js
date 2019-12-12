@@ -182,13 +182,13 @@ function reverseString(str) {
     //Random function asked at a interview - TJ
     // Return the lowest and the highest number from and array
 
-    // const numbers = [2, 4, 9, 2, 0, 16, 24, -8, 15, 2018 ];
+    const numbers = [2, 4, 9, 2, 0, 16, 24, -8, 15, 2018 ];
 
-    // const smallest_number = Math.min(...numbers); //...numbers calls a spread on the array
-    // const largest_number = Math.max(...numbers);
+    const smallest_number = Math.min(...numbers); //...numbers calls a spread on the array
+    const largest_number = Math.max(...numbers);
 
-    // console.log('Smallest Value:', smallest_number); // Smallest Value: 0
-    // console.log('Largest Value:', largest_number);   // Largest Value: 24
+    console.log('Smallest Value:', smallest_number); // Smallest Value: 0
+    console.log('Largest Value:', largest_number);   // Largest Value: 24
 
 ////////////////////////
 
@@ -250,7 +250,7 @@ function reverseString(str) {
  // const output = reverseInt('-01234');
 //  const output = capitalizeLetters('i love javascript')
     // const output = maxCharacter('javascript');
-    const output = fizzBuzz();
+    //const output = fizzBuzz();
   
   
   console.log(output);
