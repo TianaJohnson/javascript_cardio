@@ -358,6 +358,6 @@ function formatStr(str) {
 // const output = longestWord("Hi, my name is Tiana");
 // const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 // const output = flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
-const output = isAnagram('dormitory', 'dirty room');
+// const output = isAnagram('dormitory', 'dirty room');
 
 console.log(output);
