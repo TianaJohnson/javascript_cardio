@@ -330,6 +330,13 @@ function flattenArray(arrays) {
 
 }
 
+function isAnagram(str1, str2) {}
+
+// CHALLENGE 5: LETTER CHANGES
+// Change every letter of the string to the one that follows it and capitalize the vowels
+// Z should turn to A
+// ex. 'hello there' === 'Ifmmp UIfsf'
+
 // Call Function
 // const output = longestWord("Hi, my name is Tiana");
 // const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
