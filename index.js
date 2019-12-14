@@ -331,7 +331,7 @@ function flattenArray(arrays) {
 }
 
 function isAnagram(str1, str2) {
-
+    console.log(formatStr(str1));
 
 }
 
