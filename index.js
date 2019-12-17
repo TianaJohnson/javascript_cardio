@@ -358,7 +358,10 @@ function letterChanges(str)  {
             return String.fromCharCode(char.charCodeAt() +1);
         }
     });
+    newStr = newStr.replace(/a|e|i|o|u/gi, function(vowel) {
 
+        return vowel.toUpperCase();
+    });
     return newStr;
 
 }
