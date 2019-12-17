@@ -351,7 +351,7 @@ function formatStr(str) {
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
 function letterChanges(str)  {
-    let newStr = str.replace(/[a-z]/gi, function(char) {
+    let newStr = str.toLowerCase().replace(/[a-z]/gi, function(char) {
         if(char === 'z' || char === 'Z') {
             return 'a';
         } else {
