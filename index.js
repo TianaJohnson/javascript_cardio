@@ -350,6 +350,19 @@ function formatStr(str) {
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
+function letterChanges(str)  {
+    let newStr = str.replace(/[a-z]/gi, function(char) {
+        if(char === 'z' || char === 'Z') {
+            return 'a';
+        } else {
+            return String.fromCharCode(char.charCodeAt() +1);
+        }
+    });
+
+    return newStr;
+
+}
+
 
 
 
@@ -359,6 +372,6 @@ function formatStr(str) {
 // const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 // const output = flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
 // const output = isAnagram('dormitory', 'dirty room');
-const output = letterChanges('hello there', 'Ifmmp UIfsf');
+const output = letterChanges('Hello there', 'Ifmmp UIfsf');
 
 console.log(output);
